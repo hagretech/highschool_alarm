@@ -10,12 +10,12 @@ password = 'kirubel@2020mn'
 
 
 # the alarm        
-first_alarm = 25  # it is in hour
-second_alarm = 26 # it is in hour
+first_alarm = 12  # it is in hour
+second_alarm = 1 # it is in hour
 
 # while loop for 10th and 9th graders
 while (True):
-    if(first_alarm == datetime.datetime.now().minute ):
+    if(first_alarm == datetime.datetime.now().hour ):
         context = ssl.create_default_context()
         with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
             server.login(from_address, password)
@@ -34,7 +34,7 @@ while (True):
       
 # while loop for 10th and 9th graders
 while (True):
-    if(second_alarm == datetime.datetime.now().minute ):
+    if(second_alarm == datetime.datetime.now().hour ):
         context = ssl.create_default_context()
         with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
             server.login(from_address, password)
