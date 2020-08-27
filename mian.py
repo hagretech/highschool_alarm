@@ -1,5 +1,5 @@
 import csv, smtplib, ssl
-
+import datetime
 message = """Subject: time to have fun
 
 Hi {name}, we have done your first school round"""
@@ -19,3 +19,17 @@ with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
                 email,
                 message.format(name=name,grade=grade),
             )
+
+
+### the alarm
+            
+first_alarm = 6
+second_alarm = 7
+
+while (True):
+    if(first_alarm == datetime.datetime.now().hour ):
+        pass
+        
+while (True):
+    if(second_alarm == datetime.datetime.now().hour ):
+        pass
